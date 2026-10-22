@@ -124,7 +124,7 @@ export default function ChatInterface({ language = 'en', initialQuery = '' }: Ch
     },
   ];
 
-  const handleSendMessage = (textToSend?: string) => {
+  const handleSendMessage = async (textToSend?: string) => {
     const query = (textToSend || input).trim();
     if (!query) return;
 
@@ -146,6 +146,56 @@ export default function ChatInterface({ language = 'en', initialQuery = '' }: Ch
       localStorage.setItem('daleel_recent_chats', JSON.stringify(updated));
     } catch (e) {}
 
+    // 1. Try Live Groq API (openai/gpt-oss-120b)
+    try {
+      const res = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          message: query,
+          language,
+          history: messages.slice(-4),
+        }),
+      });
+
+      if (res.ok) {
+        const data = await res.json();
+        if (data.reply) {
+          const botMessage: ChatMessage = {
+            id: `bot_${Date.now()}`,
+            role: 'assistant',
+            content: data.reply,
+            sources: data.sources || [
+              {
+                title: 'Income Tax Ordinance, 2001',
+                section: 'First Schedule & Division I',
+                authority: 'FBR',
+                url: 'https://fbr.gov.pk',
+              },
+              {
+                title: 'Finance Act 2024-2025',
+                section: 'Federal Gazette of Pakistan',
+                authority: 'Finance Act',
+                url: 'https://finance.gov.pk',
+              },
+            ],
+            followUps: [
+              'How do I file Form 114 on the IRIS portal?',
+              'What are the statutory late filing penalties under Section 182?',
+            ],
+            timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+          };
+
+          setMessages((prev) => [...prev, botMessage]);
+          setIsStreaming(false);
+          return;
+        }
+      }
+    } catch (apiErr) {
+      console.warn('Live AI endpoint unreachable, using local statutory engine fallback:', apiErr);
+    }
+
+    // 2. Deterministic Fallback (Offline / Pattern-matched)
     setTimeout(() => {
       const lower = query.toLowerCase();
       let responseText = '';
