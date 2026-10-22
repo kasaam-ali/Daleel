@@ -147,12 +147,16 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-6 border-t border-[var(--border-hairline)] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[var(--text-tertiary)]">
-          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center sm:text-left">
+        <div className="pt-6 border-t border-[var(--border-hairline)] grid grid-cols-1 md:grid-cols-3 items-center gap-4 text-xs text-[var(--text-tertiary)]">
+          {/* Left: Copyright */}
+          <div className="text-center md:text-left">
             <p>© 2026 DaleelAI Pakistan. Built for Pakistani taxpayers, freelancers, and businesses.</p>
-            <span className="hidden sm:inline text-[var(--border-hairline)]">•</span>
-            <p className="text-[11px] font-medium text-[var(--text-secondary)]">
-              Made with <span className="text-emerald-500">❤️</span> by{' '}
+          </div>
+
+          {/* Center: Author Credit */}
+          <div className="text-center flex justify-center items-center">
+            <p className="text-[11px] font-medium text-[var(--text-secondary)] inline-flex items-center justify-center gap-1.5 px-3 py-1 rounded-full bg-[var(--bg-subtle)] border border-[var(--border-hairline)]">
+              <span>Made with <span className="text-rose-500">❤️</span> by</span>
               <a
                 href="https://github.com/kasaam-ali"
                 target="_blank"
@@ -163,7 +167,9 @@ export default function Footer() {
               </a>
             </p>
           </div>
-          <div className="flex items-center gap-4 text-[11px]">
+
+          {/* Right: Legal Links */}
+          <div className="flex items-center justify-center md:justify-end gap-4 text-[11px]">
             <span>Privacy & Compliance</span>
             <span>•</span>
             <span>Income Tax Ordinance 2001</span>

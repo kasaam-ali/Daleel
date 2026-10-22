@@ -13,7 +13,6 @@ import {
   Menu, 
   X, 
   MessageSquare,
-  ArrowRight,
   Command
 } from 'lucide-react';
 import DaleelLogo from '@/components/shared/DaleelLogo';
@@ -82,15 +81,6 @@ export default function Navbar({ currentLang = 'en', onLanguageChange }: NavbarP
               <LanguageToggle currentLang={currentLang} onToggle={onLanguageChange} />
             )}
             <ThemeToggle />
-
-            {/* Quick Ask CTA */}
-            <Link
-              href="/chat"
-              className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-[#087F5B] dark:bg-[#10B981] hover:bg-[#066447] text-white transition-all shadow-[inset_0_1px_0_0_rgba(255,255,255,0.2)] active:scale-[0.985]"
-            >
-              <span>{currentLang === 'en' ? 'Ask AI' : 'Poochein'}</span>
-              <ArrowRight className="w-3 h-3" />
-            </Link>
 
             {/* Mobile Menu Toggle */}
             <button
