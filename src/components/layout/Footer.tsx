@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ExternalLink, ShieldCheck } from 'lucide-react';
+import { ExternalLink, ShieldCheck, Scale, AlertCircle } from 'lucide-react';
 import DaleelLogo from '@/components/shared/DaleelLogo';
 
 export default function Footer() {
@@ -124,12 +124,36 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Important Statutory Legal Disclaimer Box */}
+        <div className="mb-8 p-4 sm:p-5 rounded-xl border border-amber-500/25 bg-amber-500/5 dark:bg-amber-500/10 backdrop-blur-sm">
+          <div className="flex items-start gap-3 sm:gap-4">
+            <div className="w-8 h-8 rounded-lg bg-amber-500/15 flex items-center justify-center shrink-0 text-amber-600 dark:text-amber-400 mt-0.5">
+              <Scale className="w-4 h-4" />
+            </div>
+            <div className="space-y-1.5 text-xs text-[var(--text-secondary)]">
+              <div className="flex items-center gap-2 flex-wrap">
+                <span className="font-semibold text-[var(--text-primary)] uppercase tracking-wider text-[11px] font-mono text-amber-700 dark:text-amber-400">
+                  Statutory Legal & Tax Disclaimer (قانو نی انتباہ)
+                </span>
+                <span className="px-2 py-0.5 text-[10px] font-mono rounded bg-amber-500/20 text-amber-800 dark:text-amber-300 border border-amber-500/30">
+                  Informational Only
+                </span>
+              </div>
+              <p className="leading-relaxed text-[11px] sm:text-xs text-[var(--text-secondary)]">
+                DaleelAI is an independent legal-technology and educational intelligence platform. <strong>DaleelAI is NOT affiliated with, authorized, or endorsed by the Federal Board of Revenue (FBR) or the Government of Pakistan</strong>. All calculations, simulated notice explanations, and AI responses are generated for general guidance and preliminary educational reference based on the Income Tax Ordinance 2001 and Finance Act 2024–2025. They <strong>do NOT constitute certified legal, financial, or tax advisory services</strong>, nor do they create an advocate-client relationship. For statutory filings, audit defenses, or formal legal disputes, always consult a licensed Chartered Accountant (ICAP) or High Court Tax Advocate.
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-[var(--border-hairline)] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[var(--text-tertiary)]">
-          <p>© 2025 DaleelAI Pakistan. Built for Pakistani taxpayers and businesses.</p>
-          <p className="text-[11px]">
-            Statutory AI calculations are for informational reference and do not substitute certified legal tax counsel.
-          </p>
+        <div className="pt-6 border-t border-[var(--border-hairline)] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[var(--text-tertiary)]">
+          <p>© 2025 DaleelAI Pakistan. Built for Pakistani taxpayers, freelancers, and businesses.</p>
+          <div className="flex items-center gap-4 text-[11px]">
+            <span>Privacy & Compliance</span>
+            <span>•</span>
+            <span>Income Tax Ordinance 2001</span>
+          </div>
         </div>
       </div>
     </footer>
