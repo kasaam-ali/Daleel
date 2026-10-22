@@ -3,18 +3,23 @@
 # ⚖️ DaleelAI (دلیل)
 ### Pakistan's Premier AI-Powered Legal & Tax Intelligence Platform
 
+[![Live Production](https://img.shields.io/badge/Live_App-daleel--three.vercel.app-087F5B?style=for-the-badge&logo=vercel&logoColor=white)](https://daleel-three.vercel.app/)
+[![Powered by Groq](https://img.shields.io/badge/AI_Engine-openai%2Fgpt--oss--120b-F55036?style=for-the-badge&logo=lightning&logoColor=white)](https://groq.com)
 [![Next.js](https://img.shields.io/badge/Next.js-16.4.2-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19.3.0-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4.0-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![Turbopack](https://img.shields.io/badge/Turbopack-Enabled-0070F3?style=for-the-badge&logo=vercel&logoColor=white)](https://turbo.build/pack)
 [![License: MIT](https://img.shields.io/badge/License-MIT-emerald.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
-[![Deploy with Vercel](https://img.shields.io/badge/Vercel-Production_Ready-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fkasaam-ali%2FDaleel)
 
 <p align="center">
   <b>Democratizing Tax Literacy & Statutory Compliance for 240M+ Citizens, Salaried Professionals, Freelancers, and Businesses across Pakistan.</b>
 </p>
 
+<p align="center">
+  🌐 <b>Live Web Application: <a href="https://daleel-three.vercel.app" target="_blank">https://daleel-three.vercel.app</a></b>
+</p>
+
+[🌐 Open Live App](https://daleel-three.vercel.app/) •
 [Explore Features](#-core-capabilities) •
 [Interactive Preview](#-visual-showcase) •
 [Quickstart](#-quickstart-guide) •
@@ -218,7 +223,8 @@ DaleelAI is optimized for zero-configuration, lightning-fast deployment on [Verc
 ## 👨‍💻 Author & Contributions
 
 * **Author**: [Kasaam Ali](https://github.com/kasaam-ali)
-* **Repository**: [https://github.com/kasaam-ali/Daleel.git](https://github.com/kasaam-ali/Daleel.git)
+* **Live Web Application**: [https://daleel-three.vercel.app](https://daleel-three.vercel.app)
+* **GitHub Repository**: [https://github.com/kasaam-ali/Daleel.git](https://github.com/kasaam-ali/Daleel.git)
 * **Contributions**: Pull requests, feature proposals, and tax rule amendments are welcome. Please open an issue first to discuss what you would like to change.
 
 <div align="center">
