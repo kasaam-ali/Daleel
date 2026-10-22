@@ -464,9 +464,18 @@ export default function ChatInterface({ language = 'en', initialQuery = '' }: Ch
           </button>
         </div>
 
-        <div className="flex items-center justify-between px-1 pt-1.5 text-[10px] text-[var(--text-tertiary)] font-mono">
-          <span>Sourced from Income Tax Ordinance 2001 · Not formal legal counsel</span>
-          <span className="hidden sm:inline">↵ to send · ⇧↵ for newline</span>
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between px-1 pt-2 gap-1.5 text-[11px] text-[var(--text-tertiary)]">
+          <p className="flex items-center gap-1.5 leading-snug">
+            <Info className="w-3.5 h-3.5 text-amber-500/80 shrink-0" />
+            <span>
+              {language === 'en'
+                ? 'Daleel AI can make mistakes. Always verify critical tax calculations and legal advice with official FBR gazettes or a certified practitioner.'
+                : 'Daleel AI se ghalti ho sakti hai. Ahem tax calculations aur legal notice advice FBR gazette ya mustanad tax consultant se zaroor verify karein.'}
+            </span>
+          </p>
+          <span className="hidden sm:inline font-mono text-[10px] shrink-0 text-[var(--text-tertiary)] self-end sm:self-center">
+            ↵ to send · ⇧↵ for newline
+          </span>
         </div>
       </div>
     </div>

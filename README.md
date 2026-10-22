@@ -223,6 +223,6 @@ DaleelAI is optimized for zero-configuration, lightning-fast deployment on [Verc
 
 <div align="center">
 
-**Made with 💚 for the taxpayers and digital economy of Pakistan.**
+**Made with 💚 by [Kasaam Ali](https://github.com/kasaam-ali) for the taxpayers and digital economy of Pakistan.**
 
 </div>

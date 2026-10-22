@@ -148,7 +148,21 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-6 border-t border-[var(--border-hairline)] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[var(--text-tertiary)]">
-          <p>© 2025 DaleelAI Pakistan. Built for Pakistani taxpayers, freelancers, and businesses.</p>
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center sm:text-left">
+            <p>© 2026 DaleelAI Pakistan. Built for Pakistani taxpayers, freelancers, and businesses.</p>
+            <span className="hidden sm:inline text-[var(--border-hairline)]">•</span>
+            <p className="text-[11px] font-medium text-[var(--text-secondary)]">
+              Made with <span className="text-emerald-500">❤️</span> by{' '}
+              <a
+                href="https://github.com/kasaam-ali"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[var(--text-primary)] hover:text-emerald-600 dark:hover:text-emerald-400 font-semibold transition-colors underline decoration-dotted underline-offset-2"
+              >
+                Kasaam Ali
+              </a>
+            </p>
+          </div>
           <div className="flex items-center gap-4 text-[11px]">
             <span>Privacy & Compliance</span>
             <span>•</span>
